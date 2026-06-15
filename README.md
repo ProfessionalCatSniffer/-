@@ -1,0 +1,393 @@
+ㄒ[digital_forex_analysis_2026.html](https://github.com/user-attachments/files/28950762/digital_forex_analysis_2026.html)
+
+<h2 class="sr-only">台灣各銀行數位換匯競品分析 2026 — 中國信託、玉山、國泰、台新、永豐、LINE Bank</h2>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+.wrap { padding: 1rem 0 2rem; }
+.tab-row { display: flex; gap: 4px; margin-bottom: 1.25rem; border-bottom: 0.5px solid var(--color-border-tertiary); flex-wrap: wrap; }
+.tab { padding: 8px 14px; font-size: 13px; cursor: pointer; border: none; border-bottom: 2px solid transparent; color: var(--color-text-secondary); background: none; margin-bottom: -1px; white-space: nowrap; }
+.tab.active { color: #534AB7; border-bottom-color: #534AB7; font-weight: 500; }
+.panel { display: none; }
+.panel.active { display: block; }
+.tbl { overflow-x: auto; margin-bottom: 1.5rem; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
+th { padding: 9px 11px; text-align: left; border-bottom: 1.5px solid var(--color-border-secondary); color: var(--color-text-secondary); font-weight: 500; font-size: 11px; background: var(--color-background-secondary); }
+td { padding: 11px; vertical-align: top; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); line-height: 1.55; }
+tr:hover td { background: var(--color-background-secondary); }
+.hi { background: #EEEDFE40 !important; }
+.hi td { background: #EEEDFE40; }
+.bank { font-weight: 500; font-size: 13px; }
+.sub { font-size: 11px; color: var(--color-text-secondary); display: block; margin-top: 2px; }
+.tag { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 11px; margin: 2px 2px 2px 0; line-height: 1.5; }
+.tp { background: #E6F1FB; color: #0C447C; }
+.tg { background: #EAF3DE; color: #27500A; }
+.to { background: #FAEEDA; color: #633806; }
+.tr { background: #FCEBEB; color: #791F1F; }
+.tv { background: #EEEDFE; color: #3C3489; }
+.tt { background: #E1F5EE; color: #085041; }
+.note { font-size: 11px; color: var(--color-text-tertiary); display: block; margin-top: 3px; line-height: 1.5; }
+.val-hi { color: #0F6E56; font-weight: 500; }
+.val-mid { color: #3C3489; }
+.val-lo { color: var(--color-text-secondary); }
+.val-bad { color: #A32D2D; }
+
+.sumgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px,1fr)); gap: 10px; margin-bottom: 1.5rem; }
+.scard { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 0.75rem 1rem; }
+.slbl { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 4px; }
+.sval { font-size: 20px; font-weight: 500; }
+.ssub { font-size: 11px; color: var(--color-text-tertiary); margin-top: 2px; }
+
+.insbox { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-top: 1.25rem; }
+.institle { font-size: 13px; font-weight: 500; margin-bottom: 0.75rem; }
+.insrow { display: flex; gap: 10px; margin-bottom: 8px; align-items: flex-start; }
+.dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+.dg { background: #1D9E75; } .da { background: #BA7517; } .dr { background: #E24B4A; }
+.instxt { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+
+.flowgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 1.5rem; }
+.fcard { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 0.9rem 1rem; }
+.ftitle { font-size: 13px; font-weight: 500; margin-bottom: 6px; }
+.fbody { font-size: 12px; color: var(--color-text-secondary); line-height: 1.7; }
+.fhi { border-color: #AFA9EC; }
+</style>
+
+<div class="wrap">
+
+<div class="sumgrid">
+  <div class="scard">
+    <div class="slbl">中信換匯手續費</div>
+    <div class="sval" style="color:#1D9E75">免費</div>
+    <div class="ssub">線上換匯零手續費</div>
+  </div>
+  <div class="scard">
+    <div class="slbl">玉山數位換匯幣別</div>
+    <div class="sval" style="color:#534AB7">15 種</div>
+    <div class="ssub">競品中最多樣</div>
+  </div>
+  <div class="scard">
+    <div class="slbl">LINE Bank 電匯手續費</div>
+    <div class="sval" style="color:#1D9E75">150 元起</div>
+    <div class="ssub">純網銀最低</div>
+  </div>
+  <div class="scard">
+    <div class="slbl">換匯最佳讓分（美金）</div>
+    <div class="sval" style="color:#534AB7">4.5 分</div>
+    <div class="ssub">數位帳戶線上換</div>
+  </div>
+</div>
+
+<div class="tab-row">
+  <button class="tab active" onclick="sw('feature')">功能與優惠比較</button>
+  <button class="tab" onclick="sw('currency')">幣別 / 通路 / 管道</button>
+  <button class="tab" onclick="sw('flow')">換匯體驗流程</button>
+  <button class="tab" onclick="sw('gap')">缺口與機會</button>
+</div>
+
+<div id="panel-feature" class="panel active">
+  <div class="tbl">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:105px">銀行 / 產品</th>
+          <th style="width:105px">線上換匯手續費</th>
+          <th style="width:110px">匯率讓分優惠</th>
+          <th style="width:105px">定期定額換匯</th>
+          <th style="width:110px">匯率到價通知</th>
+          <th style="width:145px">數位換匯特色</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hi">
+          <td class="bank">中國信託<span class="sub">iForex / Home Bank</span></td>
+          <td><span class="val-hi">免手續費</span><span class="note">線上 24 小時皆免費</span></td>
+          <td><span class="val-mid">有優惠讓分</span><span class="note">App 享匯差優惠（幅度未公告固定值）</span></td>
+          <td><span class="tg">支援</span><span class="note">最低 NT$1,000 起、連續 10 個月「錢寶寶」定存</span></td>
+          <td><span class="tg">支援</span><span class="note">設定理想價 → App 推播 → 一站換匯</span></td>
+          <td>
+            <span class="tag tv">平均成交匯率紀錄</span>
+            <span class="tag tp">匯率走勢圖</span>
+            <span class="tag to">外幣 ATM 美金/日圓/人民幣</span>
+            <span class="note">非營業日後單筆限等值 USD 8,000</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="bank">玉山銀行<span class="sub">e.Fingo / 行動銀行</span></td>
+          <td><span class="val-hi">免手續費</span><span class="note">網路/行動銀行換匯全免</span></td>
+          <td><span class="val-hi">最強讓分</span><span class="note">美金 3.1 分、歐元 1.2 角、人民幣 1.5 分、南非幣 2.5 分（2026/6）</span></td>
+          <td><span class="tg">支援</span><span class="note">定期定額換匯 + 抽獎活動整合</span></td>
+          <td><span class="tg">支援</span><span class="note">可訂閱匯率高低點通知，記錄平均買入成本</span></td>
+          <td>
+            <span class="tag tt">15 種幣別讓分</span>
+            <span class="tag tg">限時搶購閃購活動</span>
+            <span class="tag tp">大額換匯（100 萬+）專屬優惠</span>
+            <span class="note">外幣跨行匯款線上辦理享手續費優惠</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="bank">國泰世華<span class="sub">CUBE App</span></td>
+          <td><span class="val-mid">一般收費</span><span class="note">線上換匯手續費較傳統低</span></td>
+          <td><span class="val-mid">有優惠</span><span class="note">特定幣別有讓分，ATM 外幣提領彈性大</span></td>
+          <td><span class="tr">未明確主打</span></td>
+          <td><span class="tg">支援</span><span class="note">CUBE App 內可設匯率提醒</span></td>
+          <td>
+            <span class="tag tp">廣佈外幣 ATM</span>
+            <span class="tag tp">VIP 電匯優惠（全額到匯雙電報 600 元）</span>
+            <span class="note">高資產 VIP 電匯費最具競爭力</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="bank">台新銀行<span class="sub">Richart App</span></td>
+          <td><span class="val-hi">免手續費</span><span class="note">數位帳戶線上換匯</span></td>
+          <td><span class="val-mid">有優惠</span><span class="note">不定期換匯優惠活動，主打年輕族群小額</span></td>
+          <td><span class="tr">未主打</span></td>
+          <td><span class="tg">支援</span></td>
+          <td>
+            <span class="tag tg">外幣 ATM（美/日/人/歐）</span>
+            <span class="tag tp">易匯通小額跨境（Visa Direct）</span>
+            <span class="note">主打出國旅遊換匯場景，幣別活動快速更新</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="bank">永豐 DAWHO<span class="sub">DAWHO App / MMA</span></td>
+          <td><span class="val-hi">免手續費</span><span class="note">App/網銀換匯</span></td>
+          <td><span class="val-mid">減分優惠</span><span class="note">指定幣別換匯享減分（具體幅度依期間公告）</span></td>
+          <td><span class="tr">未主打</span></td>
+          <td><span class="tr">未明確</span></td>
+          <td>
+            <span class="tag to">優利特快車</span>
+            <span class="tag to">換匯+外幣定存一站完成</span>
+            <span class="tag tp">預約外幣現鈔領取</span>
+            <span class="note">換匯與投資整合強：換匯達 5,000 元計入大戶 Plus 升等任務</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="bank">LINE Bank<span class="sub">純網銀</span></td>
+          <td><span class="val-hi">換匯免手續費</span><span class="note">電匯手續費 150 元起（最低競品）</span></td>
+          <td><span class="val-lo">匯率接近牌告</span><span class="note">無特別讓分活動</span></td>
+          <td><span class="tr">不支援</span></td>
+          <td><span class="tr">不支援</span></td>
+          <td>
+            <span class="tag tt">電匯手續費最低（150 元起）</span>
+            <span class="tag tg">純 App 操作、全線上</span>
+            <span class="note">功能較基本，優勢在於電匯低費和便利性</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="panel-currency" class="panel">
+  <div class="tbl">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:110px">銀行</th>
+          <th style="width:120px">數位換匯幣別數</th>
+          <th style="width:130px">外幣 ATM 現鈔幣別</th>
+          <th style="width:130px">電匯跨境手續費</th>
+          <th style="width:90px">外幣帳戶整合</th>
+          <th style="width:120px">換匯時段限制</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hi">
+          <td class="bank">中國信託</td>
+          <td><span class="val-mid">多幣別</span><span class="note">App 支援美、日、歐、澳、英等主流幣別</span></td>
+          <td><span class="val-mid">美金、日圓、人民幣</span><span class="note">外幣 ATM 三幣別、據點 7,000+</span></td>
+          <td><span class="val-mid">VIP 優惠可比國泰</span><span class="note">標準電匯手續費 + 郵電費</span></td>
+          <td><span class="tg">支援</span><span class="note">My Way 外幣數位帳戶</span></td>
+          <td><span class="val-mid">24 小時</span><span class="note">非營業日後單筆限 USD 8,000</span></td>
+        </tr>
+        <tr>
+          <td class="bank">玉山銀行</td>
+          <td><span class="val-hi">15 種幣別</span><span class="note">美、日、歐、英、澳、港、人民幣、南非、紐、瑞士等</span></td>
+          <td><span class="val-mid">美金、日圓、港幣、人民幣</span><span class="note">外幣 ATM 提領免手續費</span></td>
+          <td><span class="val-mid">線上優惠費率</span><span class="note">網銀匯出享手續費優惠</span></td>
+          <td><span class="tg">支援</span><span class="note">台幣 + 外幣數位帳戶同開</span></td>
+          <td><span class="val-hi">近 24 小時</span><span class="note">行動銀行 02:00–23:55</span></td>
+        </tr>
+        <tr>
+          <td class="bank">國泰世華</td>
+          <td><span class="val-mid">主流幣別</span><span class="note">美、日、歐、英、澳等</span></td>
+          <td><span class="val-mid">美、日、人民幣、港幣</span><span class="note">ATM 外幣提領彈性</span></td>
+          <td><span class="val-hi">VIP 最優</span><span class="note">全額到匯雙電報 600–800 元，VIP 更優惠</span></td>
+          <td><span class="tg">支援</span><span class="note">KOKO 帳戶整合外幣</span></td>
+          <td><span class="val-mid">營業時間為主</span></td>
+        </tr>
+        <tr>
+          <td class="bank">台新銀行</td>
+          <td><span class="val-mid">主流幣別</span></td>
+          <td><span class="val-mid">美、日、人民幣、歐元</span></td>
+          <td><span class="val-mid">易匯通（Visa Direct）小額低費</span><span class="note">郵電費 400 元，整體偏中等</span></td>
+          <td><span class="tg">支援</span><span class="note">Richart 外幣帳戶</span></td>
+          <td><span class="val-mid">24 小時</span></td>
+        </tr>
+        <tr>
+          <td class="bank">永豐 DAWHO</td>
+          <td><span class="val-mid">主流幣別</span></td>
+          <td><span class="val-mid">就近永豐 ATM 或預約現鈔</span><span class="note">預約外幣現鈔可指定分行取領</span></td>
+          <td><span class="val-mid">標準費用</span></td>
+          <td><span class="tg">支援</span><span class="note">DAWHO 自動啟用外幣帳戶</span></td>
+          <td><span class="val-mid">換匯優利特快車 9:00–23:00</span></td>
+        </tr>
+        <tr>
+          <td class="bank">LINE Bank</td>
+          <td><span class="val-lo">較少幣別</span><span class="note">主流幣別，功能較基本</span></td>
+          <td><span class="val-bad">無外幣 ATM</span><span class="note">純網銀無實體據點</span></td>
+          <td><span class="val-hi">150 元起</span><span class="note">台灣純網銀電匯最低費用</span></td>
+          <td><span class="tg">支援</span><span class="note">純 App 外幣帳戶</span></td>
+          <td><span class="val-hi">24 小時全線上</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="panel-flow" class="panel">
+  <div style="margin-bottom:1rem; font-size:13px; color:var(--color-text-secondary);">各家數位換匯體驗旅程設計比較</div>
+  <div class="flowgrid">
+    <div class="fcard fhi">
+      <div class="ftitle" style="color:#534AB7">中國信託</div>
+      <div class="fbody">
+        1. App 首頁直達外幣換匯<br>
+        2. 設定匯率到價通知 → 推播觸達<br>
+        3. 點通知直接進入換匯頁一鍵成交<br>
+        4. 可設定定期定額（錢寶寶）自動扣款<br>
+        5. 查看個人平均成交匯率 + 走勢圖<br>
+        <br>
+        <span style="color:#534AB7">優勢：到價通知 → 換匯一條龍完整；24 小時免手續費</span><br>
+        <span style="color:#A32D2D">缺口：讓分幅度不透明、幣別宣傳不如玉山積極</span>
+      </div>
+    </div>
+    <div class="fcard">
+      <div class="ftitle" style="color:#0F6E56">玉山銀行</div>
+      <div class="fbody">
+        1. App / 網銀進入「外幣換匯」<br>
+        2. 查看 15 種幣別即時優惠讓分<br>
+        3. 訂閱高低點通知 + 記錄平均成本<br>
+        4. 選擇買匯 / 定期定額 / e步享利定存<br>
+        5. 大額（100 萬+）線上享專屬優惠<br>
+        6. 閃購活動：限時限量搶極優匯率<br>
+        <br>
+        <span style="color:#0F6E56">優勢：幣別最多、讓分最透明積極、場景行銷強</span><br>
+        <span style="color:#A32D2D">缺口：一般活存利率無優惠，換匯是主要拉客工具</span>
+      </div>
+    </div>
+    <div class="fcard">
+      <div class="ftitle" style="color:#0C447C">國泰世華</div>
+      <div class="fbody">
+        1. CUBE App 進入外幣區塊<br>
+        2. 查詢匯率 + 設定提醒<br>
+        3. 線上換匯 / 外幣 ATM 提領<br>
+        4. VIP 資格者享電匯最優費率<br>
+        <br>
+        <span style="color:#0C447C">優勢：大額電匯費率業界最優（VIP）；ATM 布建廣</span><br>
+        <span style="color:#A32D2D">缺口：小額換匯優惠不突出，數位換匯體驗相對傳統</span>
+      </div>
+    </div>
+    <div class="fcard">
+      <div class="ftitle" style="color:#1D9E75">台新 Richart</div>
+      <div class="fbody">
+        1. Richart App 進入外幣換匯<br>
+        2. 不定期推出換匯優惠活動<br>
+        3. 易匯通（Visa Direct）小額跨境<br>
+        4. 外幣 ATM 美/日/人/歐四幣別提領<br>
+        <br>
+        <span style="color:#1D9E75">優勢：易匯通低費跨境體驗；換匯活動年輕化行銷</span><br>
+        <span style="color:#A32D2D">缺口：定期定額換匯缺席；讓分幅度、幣別不如玉山</span>
+      </div>
+    </div>
+    <div class="fcard">
+      <div class="ftitle" style="color:#BA7517">永豐 DAWHO</div>
+      <div class="fbody">
+        1. DAWHO App 進入外幣換匯<br>
+        2. 優利特快車：換匯 + 外幣定存一鍵<br>
+        3. 預約外幣現鈔 + 指定分行提領<br>
+        4. 換匯額達標 → 自動升大戶 Plus<br>
+        <br>
+        <span style="color:#BA7517">優勢：換匯與升等任務強綁定，刺激用戶行動</span><br>
+        <span style="color:#A32D2D">缺口：換匯時段有限制；讓分宣傳不積極</span>
+      </div>
+    </div>
+    <div class="fcard">
+      <div class="ftitle" style="color:#085041">LINE Bank</div>
+      <div class="fbody">
+        1. LINE Bank App 進入外幣<br>
+        2. 買外幣 / 存外幣帳戶<br>
+        3. 電匯國際匯款（手續費 150 元起）<br>
+        <br>
+        <span style="color:#085041">優勢：電匯手續費台灣最低；全程 App 操作無門檻</span><br>
+        <span style="color:#A32D2D">缺口：無外幣 ATM、無到價通知、無定期定額、幣別少</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="panel-gap" class="panel">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:1.25rem;">
+    <div style="background:#EAF3DE; border-radius:var(--border-radius-lg); padding:1rem 1.25rem;">
+      <div style="font-size:12px; font-weight:500; color:#27500A; margin-bottom:8px;">中信換匯優勢（已具備）</div>
+      <ul style="list-style:none; font-size:13px; color:#3B6D11; line-height:1.9;">
+        <li>• 線上換匯零手續費</li>
+        <li>• 匯率到價通知 + 一站換匯完整體驗</li>
+        <li>• 定期定額換匯（錢寶寶）支援</li>
+        <li>• 平均成交匯率記錄功能</li>
+        <li>• 外幣 ATM 7,000+ 台布建密度最高</li>
+        <li>• 24 小時服務（非營業日後有單筆限額）</li>
+      </ul>
+    </div>
+    <div style="background:#FCEBEB; border-radius:var(--border-radius-lg); padding:1rem 1.25rem;">
+      <div style="font-size:12px; font-weight:500; color:#791F1F; margin-bottom:8px;">中信換匯競品缺口</div>
+      <ul style="list-style:none; font-size:13px; color:#A32D2D; line-height:1.9;">
+        <li>• 讓分幅度不透明、無固定公告（玉山每月公告）</li>
+        <li>• 幣別優惠行銷力道弱（玉山明確 15 種）</li>
+        <li>• 無閃購限時搶匯機制（玉山限時搶購）</li>
+        <li>• 換匯優惠與帳戶升等未掛鉤（永豐有）</li>
+        <li>• 換匯場景內容行銷薄弱（缺乏旅遊情境）</li>
+        <li>• 電匯跨境費用無差異化競爭力</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="insbox">
+    <div class="institle">換匯競品分析核心結論與建議</div>
+    <div class="insrow">
+      <div class="dot dg"></div>
+      <div class="instxt"><strong style="font-weight:500">中信基礎建設最強：</strong>ATM 布建、到價通知、定期定額，硬體功能齊全，但「行銷包裝」和「讓分透明度」落後玉山一截。</div>
+    </div>
+    <div class="insrow">
+      <div class="dot dg"></div>
+      <div class="instxt"><strong style="font-weight:500">玉山是換匯標竿：</strong>玉山銀行提供美元、人民幣、日幣等 15 種外幣換匯優惠，透過網路/行動銀行辦理外幣兌換，且每月公告具體讓分數字，搭配閃購活動，換匯者口碑最佳。</div>
+    </div>
+    <div class="insrow">
+      <div class="dot da"></div>
+      <div class="instxt"><strong style="font-weight:500">機會一：公告讓分透明化。</strong>學習玉山，每月明確公告美元 X 分、日圓 Y 分，讓用戶有比較基礎，降低換匯時的不確定感。</div>
+    </div>
+    <div class="insrow">
+      <div class="dot da"></div>
+      <div class="instxt"><strong style="font-weight:500">機會二：閃購換匯活動。</strong>玉山的「限時限量匯率搶購」創造搶購感，建議中信在旅遊旺季（寒暑假、春節前）推出限時日圓/美元優惠搶購，並結合 IG / Threads 行銷衝流量。</div>
+    </div>
+    <div class="insrow">
+      <div class="dot da"></div>
+      <div class="instxt"><strong style="font-weight:500">機會三：換匯與升等掛鉤。</strong>借鑒永豐 DAWHO「換匯達標 → 升大戶 Plus」，中信可設計「換匯達門檻 → 解鎖 My Way 積點加碼或信用卡回饋」，強化黏著誘因。</div>
+    </div>
+    <div class="insrow">
+      <div class="dot dr"></div>
+      <div class="instxt"><strong style="font-weight:500">威脅：LINE Bank 電匯低費。</strong>LINE Bank 電匯手續費最低 150 元起，對有跨境匯款需求的用戶吸引力強。中信可強化電匯場景差異化（如海外留學、商務匯款專案）來因應。</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+function sw(id) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
